@@ -12,6 +12,9 @@ const uglify = require('gulp-uglify');
 const ftp = require('gulp-ftp');
 const gutil = require('gulp-util');
 const rigger = require('gulp-rigger');
+const cleancss = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
@@ -52,11 +55,24 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest('public/js'));
 });
 
-gulp.task('styles', function(file) {
+gulp.task('img', function() {
+  return gulp.src('frontend/images', {since: gulp.lastRun('img')})
+  //.pipe(newer('public'))
+  .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            interlaced: true
+        }))
+  .pipe(gulp.dest('public'));
+});
+
+gulp.task('styles', function() {
   return multipipe(
       gulp.src('frontend/styles/main.less'),
       sourcemaps.init(),
       less(),
+      autoprefixer(),
+      cleancss(),
       sourcemaps.write(),
       gulp.dest('public/css')
   ).on('error', notify.onError());
