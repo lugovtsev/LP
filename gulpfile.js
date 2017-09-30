@@ -22,7 +22,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('libsjs', function() {
-  return gulp.src('frontend/scripts/*.*','!common.js')
+  return gulp.src(['frontend/scripts/*.*','!frontend/scripts/common.js'])
       .pipe(concat('libs.js'))
       .pipe(uglify())
       .pipe(gulp.dest('public/js'));
@@ -66,7 +66,7 @@ gulp.task('assets', function() {
 gulp.task('watch', function() {
   gulp.watch('frontend/styles/*.less', gulp.series('allcss'));
   gulp.watch('frontend/assets/**/*.*', gulp.series('assets'));
-  gulp.watch('frontend/js/common.js', gulp.series('commonjs'));
+  gulp.watch('frontend/scripts/common.js', gulp.series('commonjs'));
 //  gulp.watch('public/**/*.*', gulp.series('ftp'));
 });
 

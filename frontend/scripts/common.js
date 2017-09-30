@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 
+
 /*code here*/
 
 /* Прокрутка вверх
@@ -13,38 +14,137 @@ $('#totop').click(function()
 });
 */
 
-/* Плавная прокрутка меню
+/* Плавная прокрутка меню */
 
-$('#main-menu a').click(function(e)
+$('#menuList a').click(function(e)
 {
+	slideMenu(e, this);
+});
+
+$('#menuListDesktop a').click(function(e)
+{
+	slideMenu(e, this);
+});
+
+function slideMenu(e, item) {
 	e.preventDefault();
-	var blockId = $(this).attr('href');
+	var blockId = $(item).attr('href');
 	 $('html, body').animate({
         scrollTop: $(blockId).offset().top - 50
     }, 500);
+}
+
+$('#menu').click(function() {
+	if ( $('#menu').hasClass('active') ) {
+		$(".header__menu__list").removeClass('active');
+		$(this).removeClass('active');
+	}
+	else {
+		$(".header__menu__list").addClass('active');
+		$(this).addClass('active');
+	}
 });
 
-*/
+
+
 
 /*маска для input c телефоном*/
 	$(".phone-input").mask("+7 (999) 999-99-99");
 
 /*colorbox*/
-	/*$('.cert-item a').colorbox({
-			rel: '.cert-item a', //для группировки изображений
-			opacity: 0.7,
+	$('.reviews__video').colorbox({
+			rel: '.reviews__video', //для группировки изображений
+			opacity: 0.5,
 			speed: 350,
-			title: false
-		});*/
+			title: false,
+			iframe:true,
+			innerWidth:300,
+			innerHeight:180,
+		});
 
 /*slick*/
-	/*$('.slick-container').slick({
+	$('#example .slick-container').not('.slick-initialized').slick({
 	  infinite: true,
-	  arrows: false,
-	  dots: true,
+	  arrows: true,
+	  dots: false,
 	  slidesToShow: 4,
-	  slidesToScroll: 2
-	});*/
+	  slidesToScroll: 1,
+		centerMode: false,
+		focusOnSelect: true,
+		responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+				infinite: true,
+			  arrows: true,
+			  dots: false,
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+      }
+    },
+		{
+      breakpoint: 1024,
+      settings: {
+				infinite: true,
+			  arrows: true,
+			  dots: false,
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+      }
+    }
+  ]
+	});
+
+	$('#photo .slick-container').not('.slick-initialized').slick({
+	  infinite: true,
+	  arrows: true,
+	  dots: false,
+	  slidesToShow: 4,
+	  slidesToScroll: 1,
+		asNavFor: '#photo .slick-for',
+		centerMode: false,
+		focusOnSelect: true,
+		responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+				infinite: true,
+			  arrows: true,
+			  dots: false,
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+      }
+    },
+		{
+      breakpoint: 1024,
+      settings: {
+				infinite: true,
+			  arrows: true,
+			  dots: false,
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+      }
+    }
+  ]
+	});
+
+	$('#photo .slick-for').not('.slick-initialized').slick({
+	 slidesToShow: 1,
+	 slidesToScroll: 1,
+	 arrows: true,
+	 fade: true,
+	 asNavFor: '#photo .slick-container'
+	});
+
+	//удаляем класс при фокусе
+	$('.name-input').focus(function() {
+		$(this).removeClass("fill-error");
+		$(this).attr("placeholder","Ваше имя");
+	});
+	$('.phone-input').focus(function() {
+		$(this).removeClass("fill-error");
+		$(this).attr("placeholder","Ваш телефон");
+	});
 
 /*валидация формы*/
 	$("form").submit(function() {
@@ -72,7 +172,7 @@ $('#main-menu a').click(function(e)
 		else
 		{
 			name.removeClass("fill-error");
-			name.attr("placeholder","Имя*");
+			name.attr("placeholder","Ваше имя");
 
 		}
 		//не заполнен телефон
@@ -85,7 +185,7 @@ $('#main-menu a').click(function(e)
 		else
 			{
 				phone.removeClass("fill-error");
-				phone.attr("placeholder","Телефон*");
+				phone.attr("placeholder","Ваш телефон");
 			}
 		//неверный формат email
 		/*

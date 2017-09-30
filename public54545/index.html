@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Творческая студия Валерии Лошак</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header id="header" class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4 col-md-1">
+					<a href="#header" class="header__logo">
+						<img src="images/logo.png" alt="" title="Творческая студия Валерии Лошак">
+					</a>
+				</div>
+				<div class="col-md-7 header__menu__desktop">
+					<ul id="menuListDesktop" class="header__menu__desktop__list">
+						<li><a href="#teacher" class="header__menu__desktop__list__item">О преподавателе</a></li>
+						<li><a href="#about" class="header__menu__desktop__list__item">Об уроках</a></li>
+						<li><a href="#reviews" class="header__menu__desktop__list__item">Видеоотзывы</a></li>
+						<li><a href="#studio" class="header__menu__desktop__list__item">О студии</a></li>
+					</ul>
+				</div>
+				<div class="header__contacts col-xs-6 col-sm-7 col-md-4">
+					<span class="header__contacts__phone"><a href="tel:+78124596548">+7 (812) 459 65 48</a></span>
+					<span class="all-modal-but modal-but button" data-target="#modal-callback" data-toggle="modal">
+						Заказать звонок
+					</span>
+				</div>
+				<div class="header__menu col-xs-2 col-sm-1">
+					<div class="header__menu__hamburger" id="menu">
+						<span class="header__menu__hamburger__item"></span>
+						<span class="header__menu__hamburger__item"></span>
+						<span class="header__menu__hamburger__item"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul id="menuList" class="header__menu__list">
+			<li><a href="#teacher" class="header__menu__list__item">О преподавателе</a></li>
+			<li><a href="#about" class="header__menu__list__item">Об уроках</a></li>
+			<li><a href="#reviews" class="header__menu__list__item">Видеоотзывы</a></li>
+			<li><a href="#studio" class="header__menu__list__item">О студии</a></li>
+		</ul>
+	</header>
+
+	<!-- <form class="promo__form" action="php/post.php" method="post">
+		<input name="name" type="text" class="promo__input name-input" placeholder="Имя*">
+		<input name="phone" type="text" class="promo__input phone-input" placeholder="Телефон*">
+		<input name="surname" type="text" class="promo__input surname-input" placeholder="Фамилия*">
+		<input type="hidden" name="location" value="Проконсультироваться">
+		<button type="submit" class="button promo__submit">Проконсультироваться</button>
+	</form> -->
+
+<!-- ПЕРВЫЙ ЭКРАН -->
+	<section class="intro" id="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="intro__block">
+						<h1 class="intro__block__title">Уроки рисования красками для детей</h1>
+						<p class="intro__block__description">
+							Уроки живописи, на которых Ваши дети  научатся работать с красками, создадут собственный маленький шедевр, весело и интересно проведут время!
+						</p>
+						<span class="button btn-default"  data-target="#modal-lesson" data-toggle="modal">Записаться</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Преподаватель -->
+		<section class="teacher" id="teacher">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<div class="teacher__block">
+							<h2 class="teacher__title">О преподавателе</h2>
+							<img src="images/loshack.png" class="teacher__photo" title="Валерия Лошак"/>
+							<h3 class="teacher__name">Валерия Лошак</h3>
+							<div class="teacher__description">
+								<p>Занятия проходят под руководством опытного преподавателя - художника-декоратора Валерии Лошак.</p>
+								<p>Валерия окончила СПбГХПА имени А.Л. Штиглица. Она является действующим членом Союза Художников России и Санкт-Петербургского союза дизайнеров. В 2015 году стала лауреатом молодежной премии правительства Санкт-Петербурга в области культуры и искусства.</p>
+								<p>На счету нашего преподавателя множество всероссийских и зарубежных конкурсов и выставок. Имя Валерии Лошак неоднократно звучало в крупнейших СМИ.</p>
+								<p>Сама художница очень любит детей и с радостью поделится с юными учениками всеми секретами своего мастерства!</p>
+							</div>
+							<div class="teacher__tv">
+								<h4 class="teacher__tv__title">Валерия Лошак на ТВ:</h4>
+								<iframe class="iframe iframe_video teacher__video" width="100%" src="https://www.youtube.com/embed/u5VD_EsRvSM" frameborder="0" allowfullscreen></iframe>
+								<iframe class="iframe iframe_video" width="100%" src="https://www.youtube.com/embed/sgnGuImXwK0" frameborder="0" allowfullscreen></iframe>
+							</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Примеры работ -->
+		<section class="example" id="example">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<div class="example__block">
+							<h4 class="example__title">Примеры работ учеников:</h4>
+							<div class="slick-container">
+						    <div><img src="images/examples/01.jpg"/></div>
+						    <div><img src="images/examples/02.jpg"/></div>
+						    <div><img src="images/examples/03.jpg"/></div>
+								<div><img src="images/examples/04.jpg"/></div>
+						    <div><img src="images/examples/05.jpg"/></div>
+						    <div><img src="images/examples/06.jpg"/></div>
+								<div><img src="images/examples/07.jpg"/></div>
+								<div><img src="images/examples/08.jpg"/></div>
+								<div><img src="images/examples/09.jpg"/></div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Об уроках -->
+		<section class="about" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+						<div class="about__block">
+							<h2 class="about__title">Об уроках</h4>
+							<!-- <h3>Общая информация:</h3> -->
+							<p>Уроки рисования проходят в действующей мастерской художницы. Именно здесь создавались многие шедевры, и сама атмосфера подталкивает к творчеству.</p>
+							<p>Раскрыть весь свой потенциал детям поможет отличное освещение, свободное пространство и, конечно, профессиональное оборудование, доступное для юных художников совершенно бесплатно!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ФОТО -->
+		<section class="photo" id="photo">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<div class="photo__block">
+							<div class="slider slick-for">
+								<div><img src="images/photos/01.jpg"/></div>
+						    <div><img src="images/photos/02.jpg"/></div>
+						    <div><img src="images/photos/03.jpg"/></div>
+								<div><img src="images/photos/04.jpg"/></div>
+						    <div><img src="images/photos/06.jpg"/></div>
+							</div>
+							<div class="slider slick-container">
+						    <div><img src="images/photos/01.jpg"/></div>
+						    <div><img src="images/photos/02.jpg"/></div>
+						    <div><img src="images/photos/03.jpg"/></div>
+								<div><img src="images/photos/04.jpg"/></div>
+						    <div><img src="images/photos/06.jpg"/></div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ПРЕИМУЩЕСТВА -->
+		<section class="advantages" id="advantages">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+						<div class="advantages__block">
+							<h3>Преимущества:</h3>
+							<div class="advantages__info_block">
+								<div class="advantages__info_icon">
+									<div class="advantages__img__wrapper">
+										<img src="images/icon1.jpg"/>
+									</div>
+									<p>
+										Занятия проходят в настоящей<br/>просторной мастерской художника
+									</p>
+								</div>
+								<div class="advantages__info_icon">
+									<div class="advantages__img__wrapper">
+										<img src="images/icon2.jpg"/>
+									</div>
+									<p>
+										Все материалы включены,<br/>не нужно ничего покупать
+									</p>
+								</div>
+							</div>
+							<h3 class="advantages__title">Групповые занятия:</h3>
+							<p>
+								Каждое занятие является тематическим. Наши маленькие гости научатся пользоваться кистями, красками, мастихинами, щетками, пером, пастелью и погрузятся в волшебное путешествие по миру красок, цвета и фантазии! А результат занятий – первую самостоятельную картину ребенка, Вы сможете с гордостью повесить в самую красивую рамку!
+							</p>
+							<!-- <h3 class="advantages__title">Пробный урок</h3>
+							<p>
+								Современная петербургская художница, член Союза Художников России и член Санкт-Петербургского Союза дизайнеров, лауреат молодежной премии правительства Санкт-Петербурга в области культуры и искусства 2015.
+							</p> -->
+							<div class="advantages__list">
+								<div class="advantages__list__item">
+									<div class="advantages__list__item__title">Возраст:</div>
+									<div class="advantages__list__item__info">6-12 лет</div>
+								</div>
+								<div class="advantages__list__item">
+									<div class="advantages__list__item__title">Группы:</div>
+									<div class="advantages__list__item__info">3-10 человек</div>
+								</div>
+								<div class="advantages__list__item">
+									<div class="advantages__list__item__title">Длительность:</div>
+									<div class="advantages__list__item__info">1,5 часа</div>
+								</div>
+								<div class="advantages__list__item">
+									<div class="advantages__list__item__title">Материалы:</div>
+									<div class="advantages__list__item__info">Темпера, гуашь</div>
+									<div class="advantages__list__item__subtext">(Входят в стоимость)</div>
+								</div>
+							</div>
+							<div class="advantages__prices__block">
+								<div class="advantages__prices__block__item">
+									<div>Стоимость:</div>
+									<div class="advantages__prices__block__price">2 700 р</div>
+								</div>
+								<div class="advantages__prices__block__item">
+									<div>Первое занятие:</div>
+									<div class="advantages__prices__block__price red">1 800 р</div>
+								</div>
+								<span class="button btn-default" data-target="#modal-lesson" data-toggle="modal">Записаться</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ОТЗЫВЫ -->
+		<section class="reviews" id="reviews">
+			<div class="container">
+				<div>
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
+						<div class="reviews__block">
+							<h2 class="reviews__title">Видеоотзывы</h2>
+							<div class="reviews__block__item col-sm-4">
+								<img src="images/det1.jpg"/>
+								<h3>Лёша</h3>
+								<div class="reviews__block__item__name">8 лет</div>
+								<div class="button button-light">
+									<a class="reviews__video" href="https://www.youtube.com/embed/2g3yVZmCoVY">Посмотреть отзыв</a>
+								</div>
+							</div>
+							<div class="reviews__block__item col-sm-4">
+								<img src="images/det2.jpg"/>
+								<h3>Алёна</h3>
+								<div class="reviews__block__item__name">6 лет</div>
+								<div class="button button-light">
+									<a class="reviews__video" href="https://www.youtube.com/embed/2g3yVZmCoVY">Посмотреть отзыв</a>
+								</div>
+							</div>
+							<div class="reviews__block__item col-sm-4">
+								<img src="images/det3.png"/>
+								<h3>Гриша</h3>
+								<div class="reviews__block__item__name">10 лет</div>
+								<div class="button button-light">
+									<a class="reviews__video" href="https://www.youtube.com/embed/2g3yVZmCoVY">Посмотреть отзыв</a>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<span class="button btn-default" data-target="#modal-lesson" data-toggle="modal">Записаться</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- О СТУДИИ -->
+		<section class="studio" id="studio">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+						<div class="studio__block">
+							<h2 class="studio__title">О студии</h4>
+							<!-- <h3>Уютная студия:</h3> -->
+							<p>
+								Наша светлая и просторная студия располагается в историческом центре Санкт-Петербурга – Петроградской стороне. Из окон открывается вид на большой сквер, который будет радовать глаз и служить замечательным пособием для будущих картин! В каждом из нескольких больших залов студии всегда царит дружелюбная атмосфера и раздается звонкий детский смех! Ваш ребенок научится рисовать и получит радостные эмоции от собственного творчества и общения со сверстниками!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ФОТО -->
+		<section class="photo" id="photo">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<div class="photo__block">
+							<div class="slider slick-for">
+								<div><img src="images/photos/05.jpg"/></div>
+						    <div><img src="images/photos/07.jpg"/></div>
+						    <div><img src="images/photos/08.jpg"/></div>
+								<div><img src="images/photos/09.jpg"/></div>
+							</div>
+							<div class="slider slick-container">
+						    <div><img src="images/photos/05.jpg"/></div>
+						    <div><img src="images/photos/07.jpg"/></div>
+						    <div><img src="images/photos/08.jpg"/></div>
+								<div><img src="images/photos/09.jpg"/></div>
+						  </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+	<!-- КОНТАКТЫ -->
+
+	<section class="contacts" id="contacts">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="contacts__block">
+						<div class="contacts__info col-md-3">
+							<div class="contacts__phone">
+								<h3>Телефон:</h3>
+								<p>
+									+7 (812) 309-18-92
+								</p>
+							</div>
+							<div class="contacts__email">
+								<h3>Почта:</h3>
+								<p>
+									<a href="mailto:loshak@studio.ru">loshak@studio.ru</a>
+								</p>
+							</div>
+							<div class="contacts__icons">
+								<h3>Соц.сети:</h3>
+								<div>
+									<div class="contacts__icon contacts__icon-vk"></div>
+									<div class="contacts__icon contacts__icon-inst"></div>
+									<div class="contacts__icon contacts__icon-fb"></div>
+								</div>
+							</div>
+							<div class="contacts__adress">
+								<h3>Адрес:</h3>
+								<p>
+									Звенигородская, 1, корп. 2, БЦ "Звенигородский", 4 этаж, аудитория 413, 190031, Санкт-Петербург.
+								</p>
+							</div>
+						</div>
+						<div class="contacts__map col-md-9">
+							<iframe src="https://yandex.ru/map-widget/v1/-/CBUKqLve2C" width="100%" height="340" frameborder="0"></iframe>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+<!-- ФИНАЛЬНАЯ ЗАЯВКА -->
+<section class="application" id="application">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="application__block">
+						<h2>Остались вопросы?</h2>
+						<h3>Звоните</h3>
+						<p><a href="tel:+78124596548">+7 (812) 459 65 48</a></p>
+						<span class="button btn-default" data-target="#modal-callback" data-toggle="modal">Записаться</span>
+					</div>
+				</div>
+
+				<!-- <form class="application__form" action="php/post.php" method="post">
+				<div class="col-xs-12">
+					<input name="name" type="text" class="name-input" placeholder="Имя*">
+					<input name="surname"type="text" class="surname-input" placeholder="Фамилия*">
+					<input name="phone" type="text" class="phone-input" placeholder="Телефон*">
+					<input name="from" type="text" placeholder="Откуда">
+					<input name="destination" type="text" placeholder="Куда">
+					<input name="weight" type="text" placeholder="Масса груза">
+					<input name="volume" type="text" placeholder="Объем груза">
+					<textarea name="message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+				</div>
+				<input type="hidden" name="location" value="Форма заявки">
+				<button class="application__button button" type="submit">Отправить</button>
+				</form> -->
+			</div>
+		</div>
+</section>
+
+	<!--Начало формы для отправки заявки -->
+	<div class="modal fade" id="modal-callback" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+		    <div class="modal-header">
+					<h3>Заказать звонок</h3>
+					<p>Заполните форму и мы свяжемся<br/>с вами в течении 15 минут</p>
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+		    </div>
+		    <div class="modal-body">
+					<form action="php/post.php" method="post">
+						<input name="name" class="modal-input name-input" type="text" placeholder="Ваше имя">
+						<input name="phone" class="modal-input phone-input" type="text" placeholder="Ваш телефон">
+						<input type="hidden" name="location" value="Модальное окно">
+						<button type="submit" class="button modal-submit">
+						Записаться
+						</button>
+					</form>
+					<p>Нажимая  кнопку "записаться" вы соглашаетесь<br/><a href="/agreement.html">с пользовательским соглашением</a></p>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<!--Конец формы для отправки заявки -->
+	<!--Начало формы заказа пробного звонка -->
+	<div class="modal modal-lesson fade" id="modal-lesson" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-lessonBlock">
+				<h3>Пробный урок</h3>
+				<div class="modal-lessonBlock-quote">
+					<p>Друзья! Мы рады приветствовать Вас в нашей просторной, светлой студии рисования и творчества художника-декоратора Валерии Лошак. Я приглашаю Вас в сказочное, поистине волшебное путешествие в мир красок, цвета и фантазии.</p>
+					<p>Мы научим наших маленьких гостей рисовать красками, мастихинами, щетками, пером, пастелью.</p>
+					<p>Вас ждет нестандартный творческий подход к преподаванию, курс цветотерапии, абстрактной живописи и контактной импровизации для взрослых и детей.</p>
+					<p>Студия Валерии Лошак - это место встреч для тех, кто верит в создание шедевров своими руками. Мы с радостью поможем Вашим детям в реализации своей мечты о творчестве. Оценить наши уроки Вы сможете на пробном занятии, на которое я приглашаю Вас уже сегодня!</p>
+					<p>Приходите в обед, после работы, после ужина! Приводите детей, друзей, коллег! Отдыхайте и приятно проводите время! Мы ждем Вас всегда!</p>
+				</div>
+				<div class="modal-lessonTeacher">
+					<img src="images/loshack.png" title="Валерия Лошак" width="83" height="83"/>
+					<span><strong>Валерия Лошак</strong><br/>Преподаватель</span>
+				</div>
+			</div>
+		  <div class="modal-content">
+		    <div class="modal-header">
+					<h3>Запись на пробный урок</h3>
+					<p>Заполните форму и мы свяжемся<br/>с вами в течении 15 минут</p>
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+		    </div>
+		    <div class="modal-body">
+					<form action="php/post.php" method="post">
+						<input name="name" class="modal-input name-input" type="text" placeholder="Ваше имя">
+						<input name="phone" class="modal-input phone-input" type="text" placeholder="Ваш телефон">
+						<input type="hidden" name="location" value="Модальное окно">
+						<button type="submit" class="button modal-submit">
+						Записаться
+						</button>
+					</form>
+					<p>Нажимая  кнопку "записаться" вы соглашаетесь<br/>с <a href="/agreement.html">пользовательским соглашением</a></p>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<!--Конец формы заказа пробного звонка -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script> -->
+	<script type="text/javascript" src="js/libs.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+
+</body>
+</html>

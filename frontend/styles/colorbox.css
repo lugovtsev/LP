@@ -39,8 +39,8 @@
   height: 32px;
   position: absolute;
   top: -47px;
-  right: 0px;
-  background: url(../images/bt-close-photo.png) no-repeat 0 0 !important;
+  right: -60px;
+  background: url(../images/bt-close-white.png) no-repeat 0 0 !important;
 }
 
 #cboxPrevious {
@@ -49,12 +49,12 @@
   margin: -25px 0 0 0;
   overflow: visible;
   text-indent: -9999px;
-  width: 26px;
-  left: -40px;
+  width: 27px;
+  left: -60px;
   height: 50px;
   position: absolute;
   top: 50%;
-  background: url(../images/arrow-l.png) no-repeat 0 0 !important;
+  background: url(../images/arrow-l-white.png) no-repeat 0 0 !important;
 }
 
 #cboxNext {
@@ -63,12 +63,37 @@
   margin: -25px 0 0 0;
   overflow: visible;
   text-indent: -9999px;
-  width: 26px;
-  right: -40px;
+  width: 27px;
+  right: -60px;
   height: 50px;
   position: absolute;
   top: 50%;
-  background: url(../images/arrow-r.png) no-repeat 0 0 !important;
+  background: url(../images/arrow-r-white.png) no-repeat 0 0 !important;
+}
+
+@media (min-width: 768px) {
+  #cboxWrapper, #cboxContent, #cboxLoadedContent {
+    width: 600px !important;
+    height: 400px !important;
+  }
+  #colorbox {
+    width: 600px !important;
+    height: 400px !important;
+    left: 50% !important;
+    margin-left: -300px;
+  }
+}
+@media (min-width: 1024px) {
+  #cboxWrapper, #cboxContent, #cboxLoadedContent {
+    width: 770px !important;
+    height: 430px !important;
+  }
+  #colorbox {
+    width: 770px !important;
+    height: 430px !important;
+    left: 50% !important;
+    margin-left: -385px;
+  }
 }
 
 /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
